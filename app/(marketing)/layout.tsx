@@ -10,9 +10,9 @@ export default function MarketingLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <header className="container z-40 bg-background">
-        <div className="h-20 py-6 flex items-center justify-between">
+    <>
+      <header>
+        <div className="container max-w-[64rem] h-20 py-6 flex items-center justify-between">
           <MainNav items={marketingConfig.mainNav} />
           <nav>
             <Link href="/login" className={cn(buttonVariants({ variant: "secondary", size: "sm" }))}>ログイン</Link>
@@ -20,6 +20,6 @@ export default function MarketingLayout({
         </div>
       </header>
       <main>{children}</main>
-    </div>
+    </>
   );
 }
